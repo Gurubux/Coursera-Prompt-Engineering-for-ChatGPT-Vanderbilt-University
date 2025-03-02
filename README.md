@@ -2,8 +2,8 @@
 Coursera Prompt Engineering for ChatGPT Vanderbilt University
 
 # Module 1 : Course Introduction
-## Course Overview
-### V1 Motivating Example: Building a Meal Plan with a Fusion of Food from Ethiopia and Uzbekistan that is Keto
+## 1.1 Course Overview
+### 1.1.V1 Motivating Example: Building a Meal Plan with a Fusion of Food from Ethiopia and Uzbekistan that is Keto
 The speaker emphasizes that **large language models (LLMs) like ChatGPT are tools for ideation and iteration**, not just for answering questions or writing essays. They enable **rapid prototyping and refinement** of ideas that would otherwise be difficult or costly to execute.
 
 #### **Example: Meal Plan Exploration**
@@ -33,7 +33,7 @@ The speaker emphasizes that **large language models (LLMs) like ChatGPT are tool
 
 The speaker encourages **thinking of AI as a co-creator**, leveraging its capabilities for creative and complex problem-solving.
 
-### V2 Overview of the Course
+### 1.1.V2 Overview of the Course
 #### **Introduction**
 - **Instructor:** Jules White, Associate Professor of Computer Science at Vanderbilt University.
 - **Course Focus:** **Prompt Engineering**—how to effectively interact with large language models (LLMs) like ChatGPT.
@@ -75,7 +75,7 @@ The speaker encourages **thinking of AI as a co-creator**, leveraging its capabi
 - **Objective:** Equip learners with skills to **craft prompts strategically** and maximize AI’s creative potential.
 - **Final Message:** Explore, experiment, and use LLMs as a **partner in creativity and problem-solving**.
 
-### V3 Motivating Example: Act as a Speech Pathologist
+### 1.1.V3 Motivating Example: Act as a Speech Pathologist
 #### **Introduction to the Persona Pattern**  
 - **Prompt engineering unlocks advanced capabilities** of ChatGPT and other LLMs.  
 - The **Persona Pattern** is a structured way to **ask AI to act as an expert** (e.g., a speech pathologist, doctor, or even an object).  
@@ -105,14 +105,50 @@ The speaker encourages **thinking of AI as a co-creator**, leveraging its capabi
 - **AI is a tool for efficiency, not replacement**, freeing up professionals for higher-value tasks.  
 - **With the right prompt structures, AI can bring ideas to life and enhance problem-solving.**
 
+### 1.1.R1 Setting Up an Account and Using ChatGPT
 
+## 1.2 Large Language Models Basics
+### 1.2.V1 What are Large Language Models?
 
-### R1 Setting Up an Account and Using ChatGPT
+#### **What Are Large Language Models (LLMs)?**  
+- **LLMs generate text by predicting the next word** based on the input prompt.  
+- They **continue generating words** until they determine the response is complete.  
+- Responses are built **word by word** using learned language patterns.  
 
-## Large Language Models Basics
-### What are Large Language Models?
-### Randomness in Output
-### Creating Your First Prompts
+#### **How Do They Work?**  
+- Trained on **large datasets from the internet**, learning from text across different domains.  
+- Given **partial sentences**, the model **predicts the next word** and refines its response iteratively.  
+- Example:  
+  - Prompt: _"Mary had a little..."_ → Model predicts **"lamb"** based on learned patterns.  
+  - Prompt: _"Roses are red..."_ → Model completes with **"Violets are blue..."**  
+- **Context-awareness** is key—models use previous words to make more accurate predictions.  
+
+#### **Rapid Evolution of LLMs**  
+- Many models exist beyond ChatGPT: **GPT-4, LLaMa, Alpaca, and others**.  
+- The field of **prompt engineering is evolving**, meaning best practices will change over time.  
+- **Users should experiment** to adapt to new models and capabilities.  
+
+#### **Key Characteristics of LLMs**  
+1. **Outputs May Vary** –  
+   - Not always deterministic; the same prompt may yield **different responses**.  
+   - Adds **randomness** to improve diversity in text generation.  
+2. **Training Data Cutoff** –  
+   - Knowledge is limited to when the model was last trained (**e.g., ChatGPT’s knowledge stops at 2021**).  
+   - **To include new information**, users must **provide it in the prompt**.  
+3. **Not Always Perfect** –  
+   - First responses may **contain errors or require refinement**.  
+   - Users should iterate and **fine-tune prompts** for better outputs.  
+
+#### **Takeaways for Effective Prompting**  
+- **Think of LLMs as tools, not static knowledge bases.**  
+- **Design prompts carefully** to leverage their ability to predict and refine responses.  
+- **Experimentation and creativity** are key to unlocking their full potential.  
+- **Be aware of their limitations** (e.g., outdated knowledge, non-deterministic responses).  
+
+This foundational knowledge will help in writing **better prompts** throughout the course.
+
+### 1.2.V2 Randomness in Output
+### Assignment 1 Creating Your First Prompts
 
 # Module 2
 # Module 3
