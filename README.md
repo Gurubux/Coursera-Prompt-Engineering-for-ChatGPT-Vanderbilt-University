@@ -3,7 +3,7 @@ Coursera Prompt Engineering for ChatGPT Vanderbilt University
 
 # Module 1 : Course Introduction
 ## Course Overview
-### Motivating Example: Building a Meal Plan with a Fusion of Food from Ethiopia and Uzbekistan that is Keto
+### V1 Motivating Example: Building a Meal Plan with a Fusion of Food from Ethiopia and Uzbekistan that is Keto
 The speaker emphasizes that **large language models (LLMs) like ChatGPT are tools for ideation and iteration**, not just for answering questions or writing essays. They enable **rapid prototyping and refinement** of ideas that would otherwise be difficult or costly to execute.
 
 #### **Example: Meal Plan Exploration**
@@ -33,7 +33,7 @@ The speaker emphasizes that **large language models (LLMs) like ChatGPT are tool
 
 The speaker encourages **thinking of AI as a co-creator**, leveraging its capabilities for creative and complex problem-solving.
 
-### Overview of the Course
+### V2 Overview of the Course
 #### **Introduction**
 - **Instructor:** Jules White, Associate Professor of Computer Science at Vanderbilt University.
 - **Course Focus:** **Prompt Engineering**—how to effectively interact with large language models (LLMs) like ChatGPT.
@@ -75,7 +75,7 @@ The speaker encourages **thinking of AI as a co-creator**, leveraging its capabi
 - **Objective:** Equip learners with skills to **craft prompts strategically** and maximize AI’s creative potential.
 - **Final Message:** Explore, experiment, and use LLMs as a **partner in creativity and problem-solving**.
 
-### Motivating Example: Act as a Speech Pathologist
+### V3 Motivating Example: Act as a Speech Pathologist
 #### **Introduction to the Persona Pattern**  
 - **Prompt engineering unlocks advanced capabilities** of ChatGPT and other LLMs.  
 - The **Persona Pattern** is a structured way to **ask AI to act as an expert** (e.g., a speech pathologist, doctor, or even an object).  
@@ -107,7 +107,7 @@ The speaker encourages **thinking of AI as a co-creator**, leveraging its capabi
 
 
 
-### Setting Up an Account and Using ChatGPT
+### R1 Setting Up an Account and Using ChatGPT
 
 ## Large Language Models Basics
 ### What are Large Language Models?
