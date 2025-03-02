@@ -5,3 +5,8 @@ Act as a -
 ### Not Always Perfect
 - First responses may contain errors. 
 - Fine-tune prompts: Iteration is Key
+### Determinism steps
+If you want **strict determinism**, do the following:
+1. **Set `temperature=0`, disable top-k and top-p sampling** (greedy decoding).
+2. **Use a fixed random seed** (for local models).
+3. **Avoid context history variability** (send only the latest prompt).
