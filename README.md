@@ -269,7 +269,28 @@ If you want **strict determinism**, do the following:
 Would you like a setup guide for a specific use case (e.g., OpenAI API, local LLM, or another framework)?
 
 
-# Module 2
+# Module 2 - Introduction to Prompts
+## Course 1 - What are Prompts?
+### V: What is a Prompt?
+### V: Intuition Behind Prompts
+### V: Everyone Can Program with Prompts
+
+## Course 2 - Intro to Prompt Patterns?
+### V: Prompt Patterns
+### V: The Persona Pattern
+### R: Reading a Prompt Pattern
+### R: Format of the Persona Pattern
+### R: Learn More About Prompt Patterns
+### Graded Assignment: Applying the Persona Pattern
+### R: Staying Connected & Learning More
+
+## Course 3 - Prompts, Conversations and New Information?
+### V: Introducing New Information to the Large Language Model
+### V: Prompt Size Limitations
+### V: Prompts are a Tool for Repeated Use
+### V: Root Prompts
+### Graded Assignment: Creating Prompts with New Information
+### R: What to Take After or With this Course
 # Module 3
 # Module 4
 # Module 5
