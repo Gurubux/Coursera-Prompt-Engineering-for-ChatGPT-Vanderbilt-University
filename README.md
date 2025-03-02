@@ -76,12 +76,43 @@ The speaker encourages **thinking of AI as a co-creator**, leveraging its capabi
 - **Final Message:** Explore, experiment, and use LLMs as a **partner in creativity and problem-solving**.
 
 ### Motivating Example: Act as a Speech Pathologist
+#### **Introduction to the Persona Pattern**  
+- **Prompt engineering unlocks advanced capabilities** of ChatGPT and other LLMs.  
+- The **Persona Pattern** is a structured way to **ask AI to act as an expert** (e.g., a speech pathologist, doctor, or even an object).  
+- This technique **enables AI to generate expert-like insights**, even in fields where the user has no expertise.  
+
+#### **Example: AI as a Speech-Language Pathologist**  
+- The speaker used **ChatGPT to assess a child's speech** with the prompt:  
+  _"Act as a speech-language pathologist. I will provide a speech sample from a three-year-old, and you will write an assessment."_  
+- The **speech sample** provided was: _“I meed way woy.”_  
+- ChatGPT generated a **structured report**, identifying:  
+  - **Phonological and articulation errors**  
+  - **Consonant sound issues** (e.g., difficulty pronouncing "n" and "l")  
+  - **Syllable structure problems** (e.g., "way" instead of "play" due to cluster reduction)  
+
+#### **Key Observations**  
+- The **AI inferred the intended words** based on phonetic patterns.  
+- It provided **terminology and analysis** (e.g., "cluster reduction"), which the user wouldn’t have known to ask for.  
+- It **included a disclaimer** noting that **speech development varies in children**, reinforcing responsible AI use.  
+
+#### **Real-World Impact and AI’s Role**  
+- The speaker’s **wife, a real speech pathologist,** found the AI’s report detailed but **potentially excessive for a real-world case**.  
+- AI is **not replacing professionals** but can **assist in routine tasks**, such as drafting reports, allowing experts to focus on direct patient interaction.  
+
+#### **Conclusion**  
+- **Well-structured prompts unlock deep AI capabilities** that users may not realize exist.  
+- The **Persona Pattern helps users access domain-specific knowledge** without being experts themselves.  
+- **AI is a tool for efficiency, not replacement**, freeing up professionals for higher-value tasks.  
+- **With the right prompt structures, AI can bring ideas to life and enhance problem-solving.**
+
+
+
 ### Setting Up an Account and Using ChatGPT
 
-- Large Language Models Basics
-	- What are Large Language Models?
-	- Randomness in Output
-	- Creating Your First Prompts
+## Large Language Models Basics
+### What are Large Language Models?
+### Randomness in Output
+### Creating Your First Prompts
 
 # Module 2
 # Module 3
