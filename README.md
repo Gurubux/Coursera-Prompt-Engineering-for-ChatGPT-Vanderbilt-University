@@ -148,6 +148,29 @@ The speaker encourages **thinking of AI as a co-creator**, leveraging its capabi
 This foundational knowledge will help in writing **better prompts** throughout the course.
 
 ### 1.2.V2 Randomness in Output
+#### **LLMs Are Not Always Exact or Repeatable**  
+- **Large Language Models (LLMs) have inherent randomness**—they won’t always generate the same response for the same input.  
+- This **variability is intentional** and can be beneficial in **creative tasks** (e.g., storytelling) but **problematic for precise reasoning** (e.g., Yes/No answers).  
+- **Prompt engineering helps control unpredictability**, but **no method guarantees perfect consistency** every time.  
+
+#### **Demonstration of Randomness**  
+- The speaker asked **ChatGPT**: _"How many birds are outside my house?"_  
+- Each response varied slightly:  
+  - **Response 1:** AI explains it **can't perceive the world** and suggests observing outside or setting up a bird feeder.  
+  - **Response 2:** AI again states **it has no access to real-world data** but suggests setting up a **camera** instead.  
+  - **Response 3:** AI offers similar reasoning but **doesn’t mention cameras**, instead suggesting **bird baths**.  
+- **Key takeaway:** Even with a constrained question, **answers are not identical** but follow a similar structure.  
+
+#### **Why This Matters in Prompt Engineering**  
+- **LLMs generate variations based on probability**, selecting words that fit the context but aren’t fixed.  
+- **This variability must be accounted for** when designing prompts for reliable outputs.  
+- **If precision is needed**, users may need to **structure prompts more explicitly** or provide additional context.  
+
+#### **Conclusion**  
+- **Expect variation in responses**—LLMs are **not deterministic** like traditional computer programs.  
+- **Prompt engineering techniques help reduce randomness**, but some degree of variability is inevitable.  
+- **Understanding this behavior is crucial** for crafting effective prompts, especially when seeking **consistent** or **highly structured outputs**.
+
 ### Assignment 1 Creating Your First Prompts
 
 # Module 2
