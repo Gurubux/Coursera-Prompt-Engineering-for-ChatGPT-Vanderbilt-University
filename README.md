@@ -172,6 +172,102 @@ This foundational knowledge will help in writing **better prompts** throughout t
 - **Understanding this behavior is crucial** for crafting effective prompts, especially when seeking **consistent** or **highly structured outputs**.
 
 ### Assignment 1 Creating Your First Prompts
+#### How exactly can I make the response deterministic ?
+
+To make my responses **deterministic**, you need to control certain parameters in the underlying **language model settings**. Here’s how you can achieve that:
+
+---
+
+##### **1. Use Greedy Decoding (Deterministic)**
+By setting **greedy decoding**, the model **always** picks the highest-probability word at each step, leading to **fixed and repeatable outputs**.
+
+##### How to Enable:
+- Set **temperature = 0** (removes randomness).
+- Disable **top-k sampling** (ensures only the most probable token is selected).
+- Disable **top-p (nucleus) sampling**.
+
+✅ **Example Implementation (Python with OpenAI API)**:
+```python
+import openai
+
+response = openai.ChatCompletion.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "Explain how transformers work."}],
+    temperature=0,   # Eliminates randomness
+    top_p=1,         # Keeps the highest probability word
+    frequency_penalty=0,
+    presence_penalty=0
+)
+
+print(response["choices"][0]["message"]["content"])
+```
+📌 **Effect**: The same prompt will **always** yield the same response.
+
+---
+
+##### **2. Use a Fixed Random Seed (Reproducibility)**
+If you **must** allow some level of randomness but want reproducibility, setting a **fixed seed** ensures you get the same output across runs.
+
+##### How to Enable:
+- Some models (like OpenAI’s API) do **not** expose a random seed setting, but when running a model locally (e.g., `transformers` in PyTorch), you can fix the seed.
+
+✅ **Example (Hugging Face Transformers with PyTorch)**:
+```python
+import torch
+import random
+import numpy as np
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+
+# Set deterministic seed
+torch.manual_seed(42)
+random.seed(42)
+np.random.seed(42)
+
+# Load model and tokenizer
+model_name = "gpt2"
+tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+model = GPT2LMHeadModel.from_pretrained(model_name)
+
+# Generate deterministic output
+input_text = "Explain how transformers work."
+input_ids = tokenizer.encode(input_text, return_tensors="pt")
+output = model.generate(input_ids, max_length=100, do_sample=False)  # Greedy decoding
+
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+```
+📌 **Effect**: The same **seed + settings** will always give the same output.
+
+---
+
+##### **3. Disable Context Variability**
+Some models adjust responses based on previous chat history. To make outputs fully deterministic:
+- Send **only the latest prompt** (avoid full conversation history).
+- Reset state/context after each query.
+
+✅ **Example**:
+Instead of:
+```python
+messages = [
+    {"role": "system", "content": "You are an AI assistant."},
+    {"role": "user", "content": "Explain transformers."}
+]
+```
+Use:
+```python
+messages = [{"role": "user", "content": "Explain transformers."}]
+```
+📌 **Effect**: No dependency on past messages, ensuring identical outputs.
+
+---
+
+##### **Conclusion**
+If you want **strict determinism**, do the following:
+1. **Set `temperature=0`, disable top-k and top-p sampling** (greedy decoding).
+2. **Use a fixed random seed** (for local models).
+3. **Avoid context history variability** (send only the latest prompt).
+
+Would you like a setup guide for a specific use case (e.g., OpenAI API, local LLM, or another framework)?
+
 
 # Module 2
 # Module 3
