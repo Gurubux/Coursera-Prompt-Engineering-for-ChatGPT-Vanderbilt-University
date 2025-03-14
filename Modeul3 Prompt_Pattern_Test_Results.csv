@@ -1,0 +1,41 @@
+Pattern,User Input,ChatGPT Response
+Question Refinement,Should I start a business?,"**User Input:** Should I start a business?
+**ChatGPT Response:** A better version of your question could be: 'What factors should I consider before starting a business, and how can I determine if it is the right choice for me?' Would you like to use this version instead?"
+Question Refinement,Is a vegetarian diet good?,"**User Input:** Is a vegetarian diet good?
+**ChatGPT Response:** A better version of your question could be: 'What are the health benefits and potential risks of following a vegetarian diet, and how can I ensure balanced nutrition?' Would you like to use this version instead?"
+Question Refinement,What’s the best way to exercise?,"**User Input:** What’s the best way to exercise?
+**ChatGPT Response:** A better version of your question could be: 'What types of exercises are best for improving cardiovascular health, strength, and flexibility based on my fitness goals?' Would you like to use this version instead?"
+Question Refinement,How do I invest money?,"**User Input:** How do I invest money?
+**ChatGPT Response:** A better version of your question could be: 'What are the different investment options available for beginners, and how can I develop a diversified portfolio that aligns with my financial goals?' Would you like to use this version instead?"
+Question Refinement,Should I buy an electric car?,"**User Input:** Should I buy an electric car?
+**ChatGPT Response:** A better version of your question could be: 'What are the advantages and disadvantages of buying an electric car compared to a gasoline-powered vehicle, and how do they align with my driving habits and budget?' Would you like to use this version instead?"
+Cognitive Verifier,How can I become more productive at work?,"**User Input:** How can I become more productive at work?
+**ChatGPT Response:** To better answer this question, consider the following sub-questions:
+1. What are your current biggest productivity challenges at work?
+2. Do you struggle with time management, focus, or prioritization?
+3. What tools or techniques have you tried to improve productivity?
+Once you answer these, I can generate a personalized strategy to enhance your work productivity."
+Cognitive Verifier,What factors should I consider when buying a house?,"**User Input:** What factors should I consider when buying a house?
+**ChatGPT Response:** Before providing a recommendation, let's break this down:
+1. What is your budget and preferred location?
+2. Are you looking for a house as an investment or a long-term residence?
+3. What are your must-have features (e.g., number of bedrooms, proximity to schools/work)?
+Answer these, and I can provide a more detailed home-buying strategy."
+Cognitive Verifier,How do I transition into a new career?,"**User Input:** How do I transition into a new career?
+**ChatGPT Response:** To give a more tailored response, let's consider:
+1. What industry or job role are you transitioning from and to?
+2. What relevant skills or experience do you already have for the new career?
+3. Are you open to further education or certification?
+Provide details, and I will create a personalized career transition plan."
+Cognitive Verifier,How do I plan a successful budget?,"**User Input:** How do I plan a successful budget?
+**ChatGPT Response:** To create an effective budget plan, let's answer these questions:
+1. What is your total monthly income and necessary expenses?
+2. What percentage of your income do you want to allocate to savings, investments, and leisure?
+3. Are you trying to pay off debt, save for a specific goal, or build an emergency fund?
+Answer these, and I will generate a budget strategy for you."
+Cognitive Verifier,What steps should I take to improve my mental health?,"**User Input:** What steps should I take to improve my mental health?
+**ChatGPT Response:** Before suggesting strategies, consider the following:
+1. Are you experiencing stress, anxiety, depression, or general mental fatigue?
+2. What lifestyle habits (sleep, exercise, diet) could be influencing your mental health?
+3. Have you considered professional help, therapy, or mindfulness practices?
+Once you provide more details, I can suggest personalized ways to improve your mental health."
