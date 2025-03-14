@@ -2142,4 +2142,294 @@ List at least one alternative approach to solve the problem and compare/contrast
 ## 5.11 Applying Prompt Patterns II
 
 
-# Module 6
+# Module 6 - Prompts Patterns III
+## 6.1 Ask for Input Pattern
+- The **Ask for Input** pattern ensures that the large language model acknowledges a set of rules but waits for user input before responding.  
+- This is useful when defining rules for **flipped interactions**, **alternative approaches**, or **structured outputs**, preventing unnecessary responses.  
+- The key technique is to **end the prompt with an explicit instruction** like *"Ask me for the first task."* to make the model wait.  
+- Without this pattern, the model may generate **irrelevant or premature outputs**, making interactions less efficient.  
+
+### Example:
+
+**Without Ask for Input Pattern:**  
+Prompt: *"Whenever I ask you to write a prompt for a task, list alternative approaches and generate prompts for each."*  
+Output: *"Certainly! Here are three alternative approaches for organizing a cluttered desk..."* *(Unwanted output, the model invented a task.)*
+
+**With Ask for Input Pattern:**  
+Prompt: *"Whenever I ask you to write a prompt for a task, list alternative approaches and generate prompts for each. Ask me for the first task."*  
+Output: *"Certainly! What is the first task you would like me to create alternative approaches for?"* *(Now the model waits for user input.)*
+## 6.2 Format of the Ask for Input Pattern
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+**Ask me for input X**
+
+You will need to replace "X" with an input, such as a "question," "ingredient," or "goal."
+
+### Examples:
+
+**Example 1:**  
+From now on, I am going to cut/paste email chains into our conversation. You will summarize what each person's points are in the email chain. You will provide your summary as a series of sequential bullet points. At the end, list any open questions or action items directly addressed to me. My name is Jill Smith.  
+**Ask me for the first email chain.**
+
+**Example 2:**  
+From now on, translate anything I write into a series of sounds and actions from a dog that represent the dog's reaction to what I write.  
+**Ask me for the first thing to translate.**
+
+## 6.3 Combining Patterns
+## Summary: Combining Patterns
+
+- **Combining prompt patterns** is key to building more sophisticated and effective prompts.  
+- Instead of using one pattern to solve a problem, **break the problem into parts** and apply different patterns where they fit best.  
+- Examples include using **Ask for Input** with **Alternative Approaches** to generate different ideas while keeping the conversation user-driven.  
+- Many prompts in this course **already use multiple patterns**, such as **Game Play** combining **Persona Pattern** and **Ask for Input**.  
+- When combining patterns, ensure **statements are logically ordered**, such as placing "Ask for Input" at the end to guide interaction.  
+
+### Example:
+
+**Pattern Combination:**  
+- **Persona Pattern:** *"Act as a travel planner."*  
+- **Recipe Pattern:** *"I will provide a starting point and key stops. Fill in missing steps."*  
+- **Ask for Input Pattern:** *"Ask me for my travel details before planning."*  
+
+**Final Prompt:**  
+*"Act as a travel planner. I will provide a starting point and key stops, and you will fill in missing steps. Ask me for my travel details before creating the itinerary."*
+## 6.4 Outline Expansion Pattern
+- The **Outline Expansion Pattern** is used to generate structured content in pieces, making it easier to work within large language model limitations.  
+- It starts with a **high-level outline**, then **expands sections** progressively to add more details, allowing for structured content creation.  
+- This pattern is useful for **writing books, creating software plans, or developing structured documents** where each section builds on the previous one.  
+- It works well with **copy-pasting parts of the outline** into new prompts to maintain continuity and coherence across sections.  
+
+### Example:
+
+**Prompt:**  
+*"Act as an outline expander. Generate a bullet-point outline for writing a guide on ChatGPT prompt engineering. After generating the outline, ask me which section to expand on."*
+
+**Output:**  
+1. Introduction  
+2. Basics of Prompt Engineering  
+3. Tips for Writing Effective Prompts  
+   - 3.1 Understanding Language Models  
+   - 3.2 Experimenting with Different Prompt Styles  
+   - 3.3 Avoiding Common Mistakes  
+4. Advanced Prompt Engineering  
+
+*"Which section would you like to expand?"*
+## 6.5 Format of the Outline Expansion Pattern
+## Outline Expansion Pattern
+
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+**Act as an outline expander.**  
+
+- Generate a bullet point outline based on the input that I give you and then ask me for which bullet point you should expand on.  
+- Create a new outline for the bullet point that I select.  
+- At the end, ask me for what bullet point to expand next.  
+- **Ask me for what to outline.**  
+
+### Example:
+
+**Act as an outline expander.**  
+- Generate a bullet point outline based on the input that I give you and then ask me for which bullet point you should expand on.  
+- Each bullet can have at most **3-5 sub-bullets**.  
+- The bullets should be **numbered using the pattern [A-Z].[i-v].[* through ****].**  
+- Create a new outline for the bullet point that I select.  
+- At the end, **ask me for what bullet point to expand next.**  
+- **Ask me for what to outline.**
+
+## 6.6 Menu Actions Pattern
+- **Menu Actions Pattern** enables defining a set of predefined actions in a prompt, making interactions more structured and reusable.  
+- Instead of typing long prompts repeatedly, a user can define **specific commands** that trigger different actions, like expanding an outline or generating text for a section.  
+- This pattern improves **efficiency, consistency, and reusability**, making it particularly useful in **long conversations, shared workflows, or organizational best practices**.  
+
+### Example:
+
+**Prompt:**  
+*"Whenever I type 'write <bullet point> <number of paragraphs>', generate content for the selected bullet point. If I type '<bullet point>', expand that section in the outline. Now, ask me what I want to do first."*
+
+**User Input:**  
+*"Write 3.5.3 2"*  
+
+**Output:**  
+*"Generating 2 paragraphs for section 3.5.3: 'Experimenting with tone and style variations'..."*  
+
+**User Input:**  
+*"Expand 3.5.2"*  
+
+**Output:**  
+*"Expanding section 3.5.2: 'Using Examples to Guide Responses'..."*
+## 6.7 Format of the Menu Actions Pattern
+## Menu Actions Pattern
+
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+**Whenever I type: X, you will do Y.**  
+
+- *(Optional: Provide additional menu items)*  
+  - Whenever I type: Z, you will do Q.  
+
+- At the end, you will ask me for the next action.  
+
+You will need to replace **"X"** with an appropriate pattern, such as `"estimate <TASK DURATION>"` or `"add FOOD"`.  
+You will then need to specify an action for the menu item to trigger, such as `"add FOOD to my shopping list and update my estimated grocery bill"`.
+
+### Example:
+
+Whenever I type:  
+- **"add FOOD"**, you will **add FOOD to my grocery list and update my estimated grocery bill**.  
+- **"remove FOOD"**, you will **remove FOOD from my grocery list and update my estimated grocery bill**.  
+- **"save"**, you will **list alternatives to my added FOOD to save money**.  
+
+At the end, you will **ask me for the next action**.  
+**Ask me for the first action.**
+
+## 6.8 Fact Check List Pattern
+- **Fact Checklist Pattern** helps identify key factual statements in AI-generated text, making it easier to verify information.  
+- It ensures that fundamental facts are **explicitly listed** at the end of the output, highlighting key points that could **undermine accuracy** if incorrect.  
+- This approach allows users to **compare** extracted facts with the main text and **follow up** on potential inaccuracies before relying on the generated content.  
+
+### Example:
+
+**Prompt:**  
+*"Whenever you output text, generate a set of fundamental facts contained in the output. The facts should be listed at the end of the response."*
+
+**Generated Text (Summary on Writing Styles):**  
+*"Different writing styles, such as technical, creative, and instructional, each have distinct structures. Instructional content often follows a step-by-step format, while creative writing allows for more flexibility."*  
+
+**Extracted Facts:**  
+1. Writing styles include technical, creative, and instructional.  
+2. Instructional content typically follows a step-by-step format.  
+3. Creative writing allows for more flexibility in structure.  
+
+**Use Case:**  
+By reviewing and verifying the extracted facts, the user can **ensure the accuracy** of the text before relying on it.
+## 6.9 Format of the Fact Check List Pattern
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+- **Generate a set of facts that are contained in the output.**  
+- **The set of facts should be inserted at POSITION in the output.**  
+- **The set of facts should be the fundamental facts that could undermine the veracity of the output if any of them are incorrect.**  
+
+You will need to replace **POSITION** with an appropriate place to put the facts, such as **"at the end of the output."**
+
+### Example:
+
+**Whenever you output text:**  
+- **Generate a set of facts that are contained in the output.**  
+- **Insert the set of facts at the end of the output.**  
+- **Ensure the set of facts includes fundamental facts that could undermine the veracity of the output if any of them are incorrect.**
+
+## 6.10 Tail Generation Pattern
+## Summary: Tail Generation Pattern
+
+- The **Tail Generation Pattern** ensures that a large language model retains the context of a long conversation by appending a **reminder** at the **end of every output**.  
+- This tail **reinforces the rules** of the conversation, helping the model stay on track even after multiple exchanges.  
+- Often combined with the **Ask for Input Pattern**, the tail prompts the user for the next step while **restating key instructions** to avoid model drift.
+
+### Example:
+
+**Prompt:**  
+*"Whenever you generate a response, include at the end: 'Please provide the next task for me to generate alternatives for.'"*
+
+**Generated Output:**  
+*"Here are three different approaches to summarizing email threads for quick review..."*  
+*"1. Extract key questions and responses..."*  
+*"2. Summarize topics with stakeholder perspectives..."*  
+*"3. Highlight action items and pending decisions..."*  
+
+**Tail:**  
+*"Please provide the next task for me to generate alternatives for."*
+
+**Use Case:**  
+By **reinforcing instructions** at the end of each output, the model is less likely to **forget the task rules**, ensuring **consistency in long conversations**.
+## 6.11 Format of the Tail Generation Pattern
+## Tail Generation Pattern
+
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+- **At the end, repeat Y and/or ask me for X.**  
+- You will need to replace **"Y"** with what the model should repeat, such as **"repeat my list of options"**,  
+  and **"X"** with what it should ask for, such as **"for the next action."**  
+- These statements should typically be at the **end of the prompt or next to last**.  
+
+### Examples:
+
+1. **Act as an outline expander.**  
+   - Generate a bullet point outline based on the input that I give you.  
+   - Ask me for which bullet point you should expand on.  
+   - Create a new outline for the bullet point that I select.  
+   - **At the end, ask me for what bullet point to expand next.**  
+   - **Ask me for what to outline.**  
+
+2. **From now on, at the end of your output:**  
+   - Add the disclaimer:  
+     *"This output was generated by a large language model and may contain errors or inaccurate statements. All statements should be fact-checked."*  
+   - **Ask me for the first thing to write about.**
+
+## 6.12 Semantic Filter Pattern
+- The **Semantic Filter Pattern** is used to process text by **removing or retaining information** based on **meaning** rather than just keywords.  
+- This is useful for **redacting sensitive data**, **removing redundant content**, or **extracting only relevant details** from large text bodies.  
+- The model **filters text** according to **semantic rules** and may **rewrite portions** to maintain readability.
+
+### Example:  
+
+**Prompt:**  
+*"Filter this text to remove all dates and rewrite sentences slightly to maintain readability."*  
+
+**Original Text:**  
+*"Vanderbilt University was founded in 1873 and has grown significantly since then."*  
+
+**Filtered Output:**  
+*"Vanderbilt University was founded in the 19th century and has grown significantly since then."*  
+
+**Use Case:**  
+- **Redacting private data** (e.g., **medical information** or **classified details**)  
+- **Extracting relevant content** (e.g., **removing unnecessary metadata**)  
+- **Refining text** while keeping **core meaning intact**  
+
+This pattern is **powerful** when **managing large textual datasets** where **specific details must be hidden, modified, or extracted**.
+## 6.13 Format of the Semantic Filter Pattern
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+- **Filter this information to remove X.**  
+- You will need to replace **"X"** with an appropriate definition of what you want to remove, such as **"names and dates"** or **"costs greater than $100"**.  
+
+### Examples:
+
+1. **Filter this information to remove any personally identifying information or information that could potentially be used to re-identify the person.**  
+
+2. **Filter this email to remove redundant information.**  
+
+## 6.14 Course Conclusion & Thank You
+- **Encourages creativity** in using **large language models** as a **new medium** like **painting or sculpture**.  
+- **Emphasizes practice**—experimenting with prompts leads to **better outputs**.  
+- **Stay updated** with **latest research** (e.g., **ArXiv** papers) as the field evolves **rapidly**.  
+- **Collaborate with others**—new ideas emerge through **discussion and brainstorming**.  
+- **Ethical responsibility**—highlight **positive applications** of AI rather than **negative ones**.  
+- **Engage in the community**—share discoveries, insights, and creative uses of prompt engineering.  
+
+The course concludes with **encouragement to keep experimenting, collaborating, and ethically using AI** to unlock **new possibilities** in prompt engineering.
+## 6.15 Continue Learning About Prompt Engineering
+## Continue Learning About Prompt Engineering
+
+### A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT  
+**Authors:** Jules White, Quchen Fu, Sam Hays, Michael Sandborn, Carlos Olea, Henry Gilbert, Ashraf Elnashar, Jesse Spencer-Smith, Douglas C. Schmidt  
+🔗 [Read on arXiv](https://arxiv.org/abs/2302.11382)  
+
+### Chain-of-Thought Prompting Elicits Reasoning in Large Language Models  
+**Authors:** Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, Denny Zhou  
+🔗 [Read on arXiv](https://arxiv.org/abs/2201.11903)  
+
+### ReAct: Synergizing Reasoning and Acting in Language Models  
+**Authors:** Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao  
+🔗 [Read on arXiv](https://arxiv.org/abs/2210.03629)  
+
+### ChatGPT Prompt Patterns for Improving Code Quality, Refactoring, Requirements Elicitation, and Software Design  
+**Authors:** Jules White, Sam Hays, Quchen Fu, Jesse Spencer-Smith, Douglas C. Schmidt  
+🔗 [Read on arXiv](https://arxiv.org/abs/2303.07839)  
+
+---
+
+### 📌 Follow Jules White's Research
+https://www.magnum.io/people/jules.html
+
+## 6.16 Creating a Prompt-based Application

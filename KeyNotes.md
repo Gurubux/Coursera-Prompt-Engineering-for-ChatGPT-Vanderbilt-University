@@ -382,3 +382,80 @@ The **Alternative Approaches Pattern** is used to brainstorm multiple ways to so
 
 👉 *Which approach suits your lifestyle best?*  
 
+
+
+
+## **1️⃣ Ask for Input Pattern**  
+**Purpose:** Ensures the **large language model (LLM)** waits for user input before proceeding. It avoids generating unwanted responses and maintains **control over interactions**.  
+
+**Example:**  
+```
+Whenever I ask you to list alternative approaches, wait for my input. Ask me for the first task before generating anything.
+```
+✅ *"What is the first task you’d like alternative approaches for?"*  
+
+---
+
+## **2️⃣ Outline Expansion Pattern**  
+**Purpose:** Helps break down a topic into an **outline**, which can be expanded into more **detailed sections** step by step. Useful for structured content creation.  
+
+**Example:**  
+```
+Generate an outline on "Time Management Strategies."  
+Ask me which section to expand, then create sub-points for it.
+```
+✅ *"Which section would you like me to expand first?"* → Expands "Prioritization Methods"  
+
+---
+
+## **3️⃣ Menu Actions Pattern**  
+**Purpose:** Defines a **set of actions** users can invoke, like commands in software. Useful for **repetitive tasks** or structured workflows.  
+
+**Example:**  
+```
+Available actions:
+- "Summarize: [Topic]" → Generate a summary  
+- "Expand: [Bullet Point]" → Add more details  
+- "Rewrite: [Sentence]" → Improve clarity  
+Ask me which action to run.
+```
+✅ *"Which action would you like to perform?"*  
+
+---
+
+## **4️⃣ Fact Check List Pattern**  
+**Purpose:** Extracts **key facts** from generated content so users can **verify accuracy** instead of assuming correctness.  
+
+**Example:**  
+```
+Summarize the history of artificial intelligence.  
+At the end, list key facts that need verification.
+```
+✅ *Fact Checklist:*  
+1. **AI research started in the 1950s**  
+2. **Deep learning revolutionized AI in the 2010s**  
+
+---
+
+## **5️⃣ Tail Generation Pattern**  
+**Purpose:** Ensures **LLMs remember context** by adding a **summary or reminder** at the end of each response.  
+
+**Example:**  
+```
+Whenever you answer, include:
+"Let me know what you'd like next: [Options]."
+```
+✅ *"Would you like to expand on any point or ask a new question?"*  
+
+---
+
+## **6️⃣ Semantic Filter Pattern**  
+**Purpose:** Removes or **filters specific types of information** (e.g., dates, personal data) while preserving meaning.  
+
+**Example:**  
+```
+Filter the following text to remove all financial data while keeping the rest intact.
+```
+✅ *Original:* "John earned $100K in 2023."  
+✅ *Filtered:* "John had a significant income last year."  
+
